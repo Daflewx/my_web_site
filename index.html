@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Фотография и видео о людях, чувствах и красоте повседневного. Портреты, репортажи и визуальные истории.">
+  <meta name="theme-color" content="#111210">
+  <title>Новиков Давид — фотограф и видеограф</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@12.0.3/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#portfolio">Перейти к работам</a>
+  <header class="site-header container">
+    <a class="brand" href="/" aria-label="Новиков Давид — главная">dn<span class="brand-dot">.</span><span class="brand-caption">DAVId NOVIKOV<br>PHOTOGRAPHY & FILM</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Открыть меню">Меню <span>☰</span></button>
+    <!-- Переключатель сохраняет язык в localStorage; переводы — в js/i18n.js. -->
+    <button id="language-toggle" class="language-toggle" type="button" lang="en" aria-label="Switch to English">EN</button>
+    <nav id="navigation" class="navigation" aria-label="Основная навигация">
+      <a href="#portfolio">Портфолио</a><a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#contact">Контакты</a>
+    </nav>
+    <a class="header-cta" href="#contact">Обсудить съёмку <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> ФОТОГРАФ & ВИДЕОГРАФ</p>
+        <h1 id="hero-title">Чувствовать.<br>Видеть.<br><em>Сохранять.</em></h1>
+        <p class="hero-description">Живые люди. Настоящие эмоции.<br>Истории, к которым хочется возвращаться.</p>
+        <a class="button button-light" href="#portfolio">Смотреть работы <span aria-hidden="true">↗</span></a>
+        <div class="hero-footnote"><span class="tiny-cross">+</span> В каждом кадре — чуть больше, чем видно.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="swiper hero-swiper" aria-label="Избранные работы">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- HERO: замените src и srcset своей обложкой. WebP/AVIF 1600×2000, до 400 КБ.
+                   Первый кадр загружается сразу (не lazy): это главный LCP-элемент.
+                   Для фонового видео замените img на video autoplay muted loop playsinline
+                   preload="none" poster="/assets/media/hero.webp" с source data-src="/assets/media/hero.mp4".
+                   Рекомендуется MP4 H.264, 1920×1080, 6–12 секунд, без аудиодорожки, до 8 МБ. -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=85" alt="Портрет девушки в мягком естественном свете" width="1200" height="1500" fetchpriority="high">
+            </div>
+            <div class="swiper-slide">
+              <!-- HERO 2: замените адрес на свой вертикальный портрет WebP 1200×1500. -->
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=85" alt="Мужской портрет на открытом воздухе" width="1200" height="1500" loading="lazy">
+            </div>
+            <div class="swiper-slide">
+              <!-- HERO 3: WebP 1200×1500; object-position регулирует положение лица в кадре. -->
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=85" alt="Портрет девушки среди деревьев" width="1200" height="1500" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-label"><span>ИСКУССТВО БЫТЬ СОБОЙ</span><span>PORTRAIT SERIES, 2026</span></div>
+        <div class="slide-controls"><span class="slide-index">01 <span>/ 03</span></span><button class="hero-prev" aria-label="Предыдущий кадр">←</button><button class="hero-next" aria-label="Следующий кадр">→</button></div>
+      </div>
+      <div class="hero-bottom"><span>ПОРТРЕТЫ · РЕПОРТАЖИ · ВИДЕО</span><a href="#portfolio">ЛИСТАЙТЕ ВНИЗ <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section id="portfolio" class="section container" aria-labelledby="portfolio-title">
+      <div class="section-heading" data-aos="fade-up"><div><p class="eyebrow">01 / ПОРТФОЛИО</p><h2 id="portfolio-title">Избранные <em>истории</em></h2></div><p class="section-aside">Не просто фотографии.<br>Маленькие поводы почувствовать.</p></div>
+      <div class="filter-bar"><div class="filters" role="group" aria-label="Категории работ"><button class="filter is-active" data-filter="all" aria-pressed="true">Все работы <span>05</span></button><button class="filter" data-filter="portraits" aria-pressed="false">Портреты</button><button class="filter" data-filter="reportage" aria-pressed="false">Репортажи</button><button class="filter" data-filter="video" aria-pressed="false">Видео <span aria-hidden="true">↗</span></button></div><span class="collection-label">SELECTED WORK / 2026</span></div>
+      <p class="sr-only" id="gallery-status" role="status"></p>
+      <div id="gallery" class="gallery">
+        <!-- КАК ДОБАВИТЬ ФОТО: скопируйте article целиком. data-category: portraits / reportage / video.
+             href = оригинал WebP/JPEG до 2400 px по длинной стороне (до 1 МБ).
+             data-pswp-width / height = РЕАЛЬНЫЕ размеры оригинала для PhotoSwipe.
+             img src = лёгкое превью WebP 900×1200 или 1200×900, до 200 КБ.
+             img width/height задают пропорции, alt описывает фото, loading="lazy" обязателен.
+             .work-card--wide растягивает карточку на 2 колонки; удалите для обычной карточки. -->
+        <article class="work-card" data-category="portraits">
+          <a class="work-media" href="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&h=2000&q=90" data-pswp-width="1600" data-pswp-height="2000" aria-label="Открыть серию Тихий свет"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&h=1000&q=80" width="800" height="1000" alt="Девушка в полосе солнечного света" loading="lazy"><span class="work-open" aria-hidden="true">↗</span></a>
+          <div class="work-caption"><h3>Тихий свет</h3><span>ПОРТРЕТ / 2026</span></div>
+        </article>
+        <article class="work-card" data-category="reportage">
+          <!-- ГАЛЕРЕЯ: замените оба адреса — href оригинала и src превью. WebP 1600×2000 / 800×1000. -->
+          <a class="work-media" href="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&h=2000&q=90" data-pswp-width="1600" data-pswp-height="2000" aria-label="Открыть серию Быть рядом"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&h=1000&q=80" width="800" height="1000" alt="Свадебный вечер под огнями" loading="lazy"><span class="work-open" aria-hidden="true">↗</span></a>
+          <div class="work-caption"><h3>Быть рядом</h3><span>РЕПОРТАЖ / 2026</span></div>
+        </article>
+        <article class="work-card" data-category="portraits">
+          <!-- ГАЛЕРЕЯ: вертикальный портрет; WebP 1600×2000, превью 800×1000. -->
+          <a class="work-media" href="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1600&h=2000&q=90" data-pswp-width="1600" data-pswp-height="2000" aria-label="Открыть серию Без лишних слов"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&h=1000&q=80" width="800" height="1000" alt="Мужской портрет крупным планом" loading="lazy"><span class="work-open" aria-hidden="true">↗</span></a>
+          <div class="work-caption"><h3>Без лишних слов</h3><span>ПОРТРЕТ / 2025</span></div>
+        </article>
+        <article class="work-card work-card--wide" data-category="video">
+          <!-- КАК ДОБАВИТЬ ВИДЕО: href и source data-src = один MP4 H.264, 1920×1080, до 50 МБ.
+               data-media="video" включает видео в PhotoSwipe; data-pswp-* = размеры ролика.
+               poster = WebP-обложка 1200×675. data-src загружается только рядом с экраном.
+               autoplay muted loop playsinline обязательны; звук включается пользователем в лайтбоксе. -->
+          <a class="work-media" href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" data-media="video" data-pswp-width="1920" data-pswp-height="1080" aria-label="Смотреть видео Дыхание природы"><video autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&h=675&q=85" width="1920" height="1080"><source data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"></video><span class="video-badge">SHORT FILM · DEMO</span><span class="play-icon" aria-hidden="true">▶</span><span class="video-title">Дыхание природы<span>СМОТРЕТЬ ФИЛЬМ ↗</span></span></a>
+          <div class="work-caption"><h3>Дыхание природы</h3><span>ВИДЕО / 2026</span></div>
+        </article>
+        <article class="work-card" data-category="reportage">
+          <!-- ГАЛЕРЕЯ: замените городскую фотографию на свой репортаж; WebP 1600×2000. -->
+          <a class="work-media" href="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&h=2000&q=90" data-pswp-width="1600" data-pswp-height="2000" aria-label="Открыть серию После заката"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=800&h=1000&q=80" width="800" height="1000" alt="Атмосфера живого концерта" loading="lazy"><span class="work-open" aria-hidden="true">↗</span></a>
+          <div class="work-caption"><h3>После заката</h3><span>РЕПОРТАЖ / 2025</span></div>
+        </article>
+      </div>
+      <p class="gallery-empty" hidden>В этой категории пока нет работ.</p>
+      <div class="portfolio-footer"><span>Каждая история начинается со знакомства.</span><a class="text-link" href="#contact">Давайте создадим вашу <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="about" class="about-section section" aria-labelledby="about-title"><div class="container about-grid">
+      <div class="about-visual" data-aos="fade-up">
+        <!-- ФОТО ПРОФИЛЯ / АВАТАР: замените src на /assets/media/about.webp.
+             Вертикальный портрет автора 1000×1250 WebP, до 250 КБ. Измените alt и подпись. -->
+        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1000&h=1250&q=85" alt="Фотограф за работой с камерой" width="1000" height="1250" loading="lazy">
+        <span class="image-note">ПО ДРУГУЮ СТОРОНУ ОБЪЕКТИВА</span>
+      </div>
+      <div class="about-copy" data-aos="fade-up"><p class="eyebrow">02 / ОБО МНЕ</p><h2 id="about-title">Привет,<br>я Давид<em>.</em></h2><p class="about-lead">Ищу красоту в простом.<br>А в людях — их настоящих.</p><p>Для меня съёмка — это разговор. Без сложных поз и чужих ролей. Мы гуляем, говорим, привыкаем к камере. А я ловлю моменты, в которых вы узнаете себя.</p><p>Снимаю портреты, события и короткие фильмы. Помогаю с идеей, локацией и настроением — от первого сообщения до последнего кадра.</p><a class="text-link" href="#contact">Познакомимся ближе <span aria-hidden="true">↗</span></a><div class="signature">David.</div></div>
+    </div></section>
+
+    <section id="services" class="section container" aria-labelledby="services-title"><div class="section-heading" data-aos="fade-up"><div><p class="eyebrow">03 / УСЛУГИ</p><h2 id="services-title">Ваша идея.<br><em>Мой взгляд.</em></h2></div><p class="section-aside">От личной истории до большого события.<br>Найдём формат, который подойдёт вам.</p></div>
+      <!-- ПРАЙС: демонстрационные цены. Замените суммы, валюту и состав пакетов перед публикацией. -->
+      <div class="services-grid"><article class="service"><span class="service-number">01</span><span class="service-icon" aria-hidden="true">↗</span><h3>Портретная съёмка</h3><p>Про вас. Про сейчас. Про то,<br>что хочется оставить в памяти.</p><ul><li>Помощь с образом и локацией</li><li>1–2 часа съёмки</li><li>30 фотографий в авторской обработке</li></ul><div class="service-bottom"><span>от 10 000 ₸</span><a href="#contact" data-service="Портретная съёмка" aria-label="Обсудить портретную съёмку">↗</a></div></article>
+      <article class="service"><span class="service-number">02</span><span class="service-icon" aria-hidden="true">↗</span><h3>Репортаж</h3><p>Большие события и маленькие<br>моменты между ними.</p><ul><li>Обсуждение программы события</li><li>От 3 часов съёмки</li><li>Все удачные кадры в обработке</li></ul><div class="service-bottom"><span>от 25 000 ₸</span><a href="#contact" data-service="Репортаж" aria-label="Обсудить репортаж">↗</a></div></article>
+      <article class="service"><span class="service-number">03</span><span class="service-icon" aria-hidden="true">↗</span><h3>Видеосъёмка</h3><p>Истории, которые оживают.<br>В движении, свете и звуке.</p><ul><li>Разработка идеи и сценария</li><li>Съёмка и монтаж</li><li>Цветокоррекция и саунд-дизайн</li></ul><div class="service-bottom"><span>от 35 000 ₸</span><a href="#contact" data-service="Видеосъёмка" aria-label="Обсудить видеосъёмку">↗</a></div></article></div>
+      <p class="service-note">Итоговая стоимость зависит от задачи. Обсудим всё заранее, без сюрпризов.</p>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title"><div class="container contact-grid"><div data-aos="fade-up"><p class="eyebrow">04 / ДАВАЙТЕ СОЗДАДИМ ИСТОРИЮ</p><h2 id="contact-title">Всё начинается<br>с <em>«привет».</em></h2><p>Расскажите о своей идее.<br>Вместе превратим её в кадры.</p><div class="social-links"><!-- Замените URL на свои профили перед публикацией. --><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="https://vk.com/" target="_blank" rel="noopener noreferrer">ВКонтакте ↗</a><a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">Behance ↗</a></div></div>
+      <form id="contact-form" class="contact-form"><label for="contact-name">Как вас зовут?</label><input id="contact-name" name="name" placeholder="Ваше имя" autocomplete="name" required maxlength="100"><label for="contact-email">Ваш email</label><input id="contact-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required maxlength="254"><label for="contact-message">Несколько слов об идее</label><textarea id="contact-message" name="message" rows="2" placeholder="Что, где и когда вы хотите снять?" required maxlength="3000"></textarea><button class="button button-light" type="submit">Обсудить съёмку <span aria-hidden="true">↗</span></button><p class="form-note">Форма подготовит письмо в вашем почтовом приложении.</p><p id="contact-status" role="status"></p></form>
+    </div></section>
+  </main>
+  <footer class="site-footer container"><a class="brand" href="/">av<span class="brand-dot">.</span></a><span>© <span id="year">2026</span> Александр Волков</span><span>СДЕЛАНО С ВНИМАНИЕМ К ДЕТАЛЯМ</span><a href="#" aria-label="Вернуться наверх">↑</a></footer>
+
+  <!-- АДМИНКА: открывается по /admin или /#admin. Скрытая ссылка НЕ является защитой.
+       Безопасность обеспечивают Supabase Auth + RLS из supabase/schema.sql. -->
+  <dialog id="admin-dialog" class="admin-dialog" aria-labelledby="admin-title"><button class="dialog-close" type="button" aria-label="Закрыть админку">×</button><p class="eyebrow">УПРАВЛЕНИЕ ПОРТФОЛИО</p><h2 id="admin-title">Студия</h2><p id="admin-status" role="status"></p>
+    <form id="login-form" class="admin-form"><label>Email<input name="email" type="email" autocomplete="username" required></label><label>Пароль<input name="password" type="password" autocomplete="current-password" required minlength="8"></label><button class="button button-light" type="submit">Войти ↗</button></form>
+    <div id="admin-panel" hidden><form id="upload-form" class="admin-form"><label>Название<input name="title" required maxlength="100"></label><label>Описание<textarea name="description" maxlength="1000" rows="3"></textarea></label><label>Категория<select name="category"><option value="portraits">Портреты</option><option value="reportage">Репортажи</option><option value="video">Видео</option></select></label><label>Медиафайл<input name="file" type="file" accept="image/jpeg,image/png,image/webp,video/mp4" required></label><p class="form-note">Фото: JPEG, PNG, WebP до 10 МБ. Видео: MP4 до 50 МБ. Превью фотографий создаётся автоматически.</p><button class="button button-light" type="submit">Загрузить и опубликовать ↗</button></form><button id="logout" class="text-link" type="button">Выйти из аккаунта</button></div>
+  </dialog>
+  <noscript><p class="noscript-note">JavaScript выключен. Фотографии доступны по прямым ссылкам; фильтры и админка требуют JavaScript.</p></noscript>
+</body>
+</html>
