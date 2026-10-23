@@ -4,6 +4,10 @@ import { appendWork, applyFilter } from './gallery.js';
 import { validateMedia, inspectMedia, createThumbnail, fileTypes } from './media.js';
 import { t } from './i18n.js';
 
+// Корень приложения определяется по модулю, включая /repository/ на статическом хостинге.
+const siteRoot = new URL('../', import.meta.url);
+const adminPath = `${siteRoot.pathname}admin`;
+
 export function initAdmin() {
   const dialog = document.querySelector('#admin-dialog');
   const login = document.querySelector('#login-form');
@@ -38,7 +42,7 @@ export function initAdmin() {
   }
 
   async function openFromLocation() {
-    if (!(location.pathname.replace(/\/$/, '') === '/admin' || location.hash === '#admin')) return;
+    if (!(location.pathname.replace(/\/$/, '') === adminPath || location.hash === '#admin')) return;
     if (!dialog.open) dialog.showModal();
     if (!isConfigured()) {
       message('Демо-режим: заполните js/config.js и выполните supabase/schema.sql. Вход и загрузка станут доступны после подключения.');
@@ -49,7 +53,7 @@ export function initAdmin() {
   }
   dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('close', () => {
-    if (location.pathname.startsWith('/admin') || location.hash === '#admin') history.replaceState(null, '', '/');
+    if (location.pathname.replace(/\/$/, '') === adminPath || location.hash === '#admin') history.replaceState(null, '', siteRoot.pathname);
   });
   window.addEventListener('hashchange', openFromLocation);
   window.addEventListener('popstate', openFromLocation);

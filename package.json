@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/server.js",
+    "dev:lan": "node scripts/server.js --host",
     "start": "node scripts/server.js",
     "check": "node --check js/main.js && node --check js/i18n.js && node --check js/gallery.js && node --check js/upload.js && node --check js/media.js && node --check js/config.js && node --check js/supabase.js && node --check scripts/server.js",
     "test": "node --test tests/*.test.js"

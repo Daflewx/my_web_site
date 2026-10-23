@@ -3,6 +3,7 @@ import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { dirname, extname, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { networkInterfaces } from 'node:os';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.mp4': 'video/mp4', '.avif': 'image/avif' };
@@ -10,6 +11,8 @@ const server = createServer(async (request, response) => {
   try {
     if (!['GET', 'HEAD'].includes(request.method)) { response.writeHead(405, { Allow: 'GET, HEAD' }).end(); return; }
     const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
+    // Относительные URL ассетов должны разрешаться от корня, а не от /admin/.
+    if (pathname === '/admin/') { response.writeHead(302, { Location: '/admin' }).end(); return; }
     const relative = ['/', '/admin', '/admin/'].includes(pathname) ? 'index.html' : pathname.slice(1);
     // Раздаём только фронтенд; SQL, тесты, dotfiles и исходники сервера недоступны.
     if (!(relative === 'index.html' || /^(css|js|assets)\//.test(relative)) || relative.split(/[\\/]/).some(part => part.startsWith('.'))) { response.writeHead(404).end('Not found'); return; }
@@ -31,4 +34,22 @@ const server = createServer(async (request, response) => {
   } catch (error) { response.writeHead(error.code === 'ENOENT' ? 404 : 400).end('Not found'); }
 });
 const port = Number(process.env.PORT || 5173);
-server.listen(port, '127.0.0.1', () => console.log(`Portfolio: http://localhost:${port}\nAdmin: http://localhost:${port}/admin`));
+const networkMode = process.argv.includes('--host');
+const host = networkMode ? '0.0.0.0' : '127.0.0.1';
+server.on('error', error => {
+  console.error(error.code === 'EADDRINUSE'
+    ? `Port ${port} is already in use. Stop the other portfolio server before starting this one.`
+    : `Unable to start server: ${error.message}`);
+  process.exitCode = 1;
+});
+server.listen(port, host, () => {
+  const listeningPort = server.address().port;
+  console.log(`Portfolio: http://localhost:${listeningPort}\nAdmin: http://localhost:${listeningPort}/admin`);
+  if (networkMode) {
+    const addresses = new Set(Object.values(networkInterfaces()).flat()
+      .filter(info => info && info.family === 'IPv4' && !info.internal && !info.address.startsWith('169.254.'))
+      .map(info => info.address));
+    for (const address of addresses) console.log(`Phone (same network): http://${address}:${listeningPort}`);
+    console.log('Keep this terminal running. Use the address of your home network adapter.');
+  }
+});

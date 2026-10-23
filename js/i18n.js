@@ -23,10 +23,10 @@ export const translations = {
   'Не удалось прочитать файл за 15 секунд.': 'The file could not be read within 15 seconds.', 'У файла нет корректных размеров.': 'The file has invalid dimensions.',
   'Файл повреждён или кодек не поддерживается браузером.': 'The file is damaged or its codec is not supported by this browser.',
   'Не удалось создать превью.': 'Could not create a thumbnail.',
-  'Александр Волков — фотограф и видеограф': 'Alexander Volkov — photographer & filmmaker',
+  'Новиков Давид — фотограф и видеограф': 'David Novikov — photographer & filmmaker',
   'Фотография и видео о людях, чувствах и красоте повседневного. Портреты, репортажи и визуальные истории.': 'Photography and film about people, feelings and everyday beauty. Portraits, events and visual stories.',
   'Перейти к работам': 'Skip to work',
-  'Александр Волков — главная': 'Alexander Volkov — home',
+  'Новиков Давид — главная': 'David Novikov — home',
   'Меню': 'Menu', 'Открыть меню': 'Open menu', 'Закрыть меню': 'Close menu',
   'Основная навигация': 'Main navigation', 'Портфолио': 'Portfolio', 'Обо мне': 'About', 'Услуги': 'Services', 'Контакты': 'Contact',
   'Обсудить съёмку': 'Let’s talk', 'ФОТОГРАФ & ВИДЕОГРАФ': 'PHOTOGRAPHER & FILMMAKER',
@@ -46,12 +46,12 @@ export const translations = {
   'Открыть серию Быть рядом': 'View Together', 'Быть рядом': 'Together', 'Свадебный вечер под огнями': 'A wedding evening under the lights',
   'РЕПОРТАЖ / 2026': 'EVENT / 2026', 'РЕПОРТАЖ / 2025': 'EVENT / 2025',
   'Открыть серию Без лишних слов': 'View Without words', 'Без лишних слов': 'Without words', 'Мужской портрет крупным планом': 'A close-up portrait of a man',
-  'Смотреть видео Дыхание природы': 'Watch Nature’s breath', 'Дыхание природы': 'Nature’s breath', 'СМОТРЕТЬ ФИЛЬМ ↗': 'WATCH FILM ↗', 'ВИДЕО / 2026': 'FILM / 2026',
+  'Смотреть видео Дыхание природы': 'Watch Nature’s breath', 'Дыхание природы': 'Nature’s breath', 'СМОТРЕТЬ ФИЛЬМ': 'WATCH FILM', 'ВИДЕО / 2026': 'FILM / 2026',
   'Открыть серию После заката': 'View After sunset', 'После заката': 'After sunset', 'Атмосфера живого концерта': 'The atmosphere of a live concert',
   'В этой категории пока нет работ.': 'There is no work in this category yet.',
   'Каждая история начинается со знакомства.': 'Every story starts with a conversation.', 'Давайте создадим вашу': 'Let’s create yours',
   'Фотограф за работой с камерой': 'A photographer at work', 'ПО ДРУГУЮ СТОРОНУ ОБЪЕКТИВА': 'BEHIND THE LENS',
-  '02 / ОБО МНЕ': '02 / ABOUT', 'Привет,': 'Hello,', 'я Александр': 'I’m Alexander', 'Ищу красоту в простом.': 'Finding beauty in the everyday.', 'А в людях — их настоящих.': 'And the real person behind the portrait.',
+  '02 / ОБО МНЕ': '02 / ABOUT', 'Привет,': 'Hello,', 'я Давид': 'I’m David', 'Ищу красоту в простом.': 'Finding beauty in the everyday.', 'А в людях — их настоящих.': 'And the real person behind the portrait.',
   'Для меня съёмка — это разговор. Без сложных поз и чужих ролей. Мы гуляем, говорим, привыкаем к камере. А я ловлю моменты, в которых вы узнаете себя.': 'For me, a shoot is a conversation. No complicated poses or roles to play. We walk, talk and get comfortable with the camera. I capture the moments that feel like you.',
   'Снимаю портреты, события и короткие фильмы. Помогаю с идеей, локацией и настроением — от первого сообщения до последнего кадра.': 'I create portraits, event photography and short films. I help shape the idea, location and mood — from the first message to the final frame.',
   'Познакомимся ближе': 'Let’s get to know each other', '03 / УСЛУГИ': '03 / SERVICES', 'Ваша идея.': 'Your idea.', 'Мой взгляд.': 'My perspective.',
@@ -67,15 +67,15 @@ export const translations = {
   'от 35 000 ₽': 'from ₽35,000', 'Обсудить видеосъёмку': 'Discuss a film project',
   'Итоговая стоимость зависит от задачи. Обсудим всё заранее, без сюрпризов.': 'The final price depends on your project. We’ll agree on everything upfront, with no surprises.',
   '04 / ДАВАЙТЕ СОЗДАДИМ ИСТОРИЮ': '04 / LET’S CREATE A STORY', 'Всё начинается': 'It all starts', 'с': 'with', '«привет».': '“hello”.',
-  'Расскажите о своей идее.': 'Tell me about your idea.', 'Вместе превратим её в кадры.': 'Let’s turn it into something worth keeping.', 'ВКонтакте ↗': 'VK ↗',
+  'Расскажите о своей идее.': 'Tell me about your idea.', 'Вместе превратим её в кадры.': 'Let’s turn it into something worth keeping.',
   'Как вас зовут?': 'Your name', 'Ваше имя': 'Your name', 'Ваш email': 'Your email', 'Несколько слов об идее': 'A few words about your idea',
   'Что, где и когда вы хотите снять?': 'What, where and when would you like to shoot?',
   'Форма подготовит письмо в вашем почтовом приложении.': 'This form prepares a message in your email app.',
-  'Александр Волков': 'Alexander Volkov', 'СДЕЛАНО С ВНИМАНИЕМ К ДЕТАЛЯМ': 'MADE WITH ATTENTION TO DETAIL', 'Вернуться наверх': 'Back to top',
-  'Закрыть админку': 'Close admin', 'УПРАВЛЕНИЕ ПОРТФОЛИО': 'PORTFOLIO MANAGEMENT', 'Студия': 'Studio', 'Пароль': 'Password', 'Войти ↗': 'Sign in ↗',
+  'Новиков Давид': 'David Novikov', 'СДЕЛАНО С ВНИМАНИЕМ К ДЕТАЛЯМ': 'MADE WITH ATTENTION TO DETAIL', 'Вернуться наверх': 'Back to top',
+  'Закрыть админку': 'Close admin', 'УПРАВЛЕНИЕ ПОРТФОЛИО': 'PORTFOLIO MANAGEMENT', 'Студия': 'Studio', 'Пароль': 'Password', 'Войти': 'Sign in',
   'Название': 'Title', 'Описание': 'Description', 'Категория': 'Category', 'Медиафайл': 'Media file',
   'Фото: JPEG, PNG, WebP до 10 МБ. Видео: MP4 до 50 МБ. Превью фотографий создаётся автоматически.': 'Photos: JPEG, PNG, WebP up to 10 MB. Video: MP4 up to 50 MB. Photo thumbnails are generated automatically.',
-  'Загрузить и опубликовать ↗': 'Upload and publish ↗', 'Выйти из аккаунта': 'Sign out',
+  'Загрузить и опубликовать': 'Upload and publish', 'Выйти из аккаунта': 'Sign out',
   'Демо-форма: адрес фотографа ещё не настроен. Укажите contactEmail в js/config.js.': 'Demo form: the photographer’s email is not configured yet. Set contactEmail in js/config.js.',
   'Показано работ: {count}': 'Works shown: {count}', 'Открыть: {title}': 'Open: {title}',
   'ПОРТРЕТ': 'PORTRAIT', 'РЕПОРТАЖ': 'EVENT', 'ВИДЕО': 'FILM',
@@ -124,7 +124,7 @@ export function initLanguage() {
 export function setLanguage(value) {
   language = value === 'en' ? 'en' : 'ru';
   document.documentElement.lang = language;
-  document.title = t('Александр Волков — фотограф и видеограф');
+  document.title = t('Новиков Давид — фотограф и видеограф');
   bindings.forEach(update => update());
   const button = document.querySelector('#language-toggle');
   button.textContent = language === 'ru' ? 'EN' : 'RU';
