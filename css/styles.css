@@ -50,9 +50,8 @@ em { font-family: var(--font-display); font-weight: 400; }
 /* SVG вместо символа-эмодзи: одинаковая одноцветная стрелка на iOS, Android и ПК. */
 .icon-arrow { display: inline-block; width: 16px; height: 16px; flex-shrink: 0; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
 .button .icon-arrow { width: 20px; height: 20px; }
-.work-open .icon-arrow, .filter .icon-arrow { width: 14px; height: 14px; }
+.work-open .icon-arrow { width: 14px; height: 14px; }
 .service-icon .icon-arrow { width: 24px; height: 24px; }
-.video-title .icon-arrow { width: 12px; height: 12px; }
 .social-links .icon-arrow { margin-left: 5px; }
 .text-link { font-size: 12px; display: inline-flex; justify-content: space-between; gap: 30px; padding: 10px 0; border-bottom: 1px solid var(--muted); }
 .text-link:hover { color: var(--accent); }
