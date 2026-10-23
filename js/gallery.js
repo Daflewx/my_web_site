@@ -20,6 +20,24 @@ const videoObserver = new IntersectionObserver(entries => {
 export function observeVideos() {
   document.querySelectorAll('main video').forEach(video => {
     if (observedVideos.has(video)) return;
+    const preview = video.closest('.work-media');
+    if (preview) {
+      // Пока autoplay не начался (например, при энергосбережении iOS),
+      // показываем обложку вместо video с системной кнопкой Play.
+      if (video.poster && !preview.querySelector('.video-poster')) {
+        const poster = document.createElement('img');
+        poster.className = 'video-poster';
+        poster.src = video.poster;
+        poster.alt = '';
+        poster.loading = 'lazy';
+        poster.setAttribute('aria-hidden', 'true');
+        preview.prepend(poster);
+      }
+      video.addEventListener('playing', () => preview.classList.add('is-playing'));
+      ['pause', 'ended', 'error', 'emptied'].forEach(event => {
+        video.addEventListener(event, () => preview.classList.remove('is-playing'));
+      });
+    }
     video.autoplay = !reducedMotion.matches;
     observedVideos.add(video);
     videoObserver.observe(video);
@@ -77,15 +95,12 @@ export function appendWork(work, prepend = false) {
     video.preload = 'none';
     video.width = work.width;
     video.height = work.height;
+    if (work.thumbnail_path) video.poster = publicUrl(work.thumbnail_path);
     const source = document.createElement('source');
     source.dataset.src = link.href;
     source.type = 'video/mp4';
     video.append(source);
-    const play = document.createElement('span');
-    play.className = 'play-icon';
-    play.setAttribute('aria-hidden', 'true');
-    play.textContent = '▶';
-    link.append(video, play);
+    link.append(video);
   } else {
     const image = document.createElement('img');
     image.src = publicUrl(work.thumbnail_path || work.storage_path);

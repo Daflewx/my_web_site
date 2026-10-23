@@ -111,6 +111,13 @@ h2 em { color: var(--accent); }
 .work-card--wide .work-media { aspect-ratio: auto; height: calc(100% - 40px); min-height: 300px; }
 .work-media img, .work-media video { width: 100%; height: 100%; filter: var(--media-filter); transition: transform 650ms ease, filter 650ms ease; }
 .work-media:hover img, .work-media:hover video { transform: scale(1.035); filter: grayscale(30%); }
+/* Превью без Play: video видно только после начала воспроизведения.
+   Обложка остаётся при запрете autoplay; элементы управления лайтбокса не затрагиваются. */
+.work-media > .video-poster { position: absolute; inset: 0; pointer-events: none; }
+.work-media > video { opacity: 0; pointer-events: none; }
+.work-media.is-playing > video { opacity: 1; }
+.work-media.is-playing > .video-poster { opacity: 0; }
+.work-media > video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
 .work-open { position: absolute; right: 16px; bottom: 16px; width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid #ffffff80; border-radius: 50%; color: #fff; background: #1113; }
 .work-caption { min-height: 40px; padding-top: 14px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .work-caption h3 { font-size: 12px; }
@@ -118,7 +125,6 @@ h2 em { color: var(--accent); }
 .video-badge { position: absolute; top: 20px; left: 23px; font-size: 8px; letter-spacing: .2em; color: #fff; }
 .video-title { position: absolute; bottom: 25px; left: 26px; font-size: 26px; color: #fff; text-shadow: 0 1px 8px #000; }
 .video-title span { display: block; font-size: 8px; letter-spacing: .16em; margin-top: 8px; }
-.play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: 1px solid #ffffffa0; background: #0002; color: white; width: 65px; height: 65px; border-radius: 50%; display: grid; place-items: center; font-size: 16px; padding-left: 4px; }
 .portfolio-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 46px; color: var(--muted); font-size: 11px; }
 .portfolio-footer a { color: var(--text); }
 .gallery-empty { padding: 50px 0; color: var(--muted); }
@@ -261,7 +267,6 @@ body:not(.aos-ready) [data-aos] { opacity: 1 !important; transform: none !import
   .work-caption > span { font-size: 8px; }
   .work-open { width: 24px; height: 24px; right: 10px; bottom: 10px; }
   .video-title { font-size: 18px; left: 16px; bottom: 15px; }
-  .play-icon { width: 44px; height: 44px; }
   .video-badge { top: 13px; left: 16px; font-size: 6px; }
   .portfolio-footer { align-items: flex-start; flex-direction: column; gap: 15px; }
   .about-grid { grid-template-columns: 1fr; }

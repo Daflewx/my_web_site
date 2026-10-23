@@ -96,8 +96,9 @@
           <!-- КАК ДОБАВИТЬ ВИДЕО: href и source data-src = один MP4 H.264, 1920×1080, до 50 МБ.
                data-media="video" включает видео в PhotoSwipe; data-pswp-* = размеры ролика.
                poster = WebP-обложка 1200×675. data-src загружается только рядом с экраном.
-               autoplay muted loop playsinline обязательны; звук включается пользователем в лайтбоксе. -->
-          <a class="work-media" href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" data-media="video" data-pswp-width="1920" data-pswp-height="1080" aria-label="Смотреть видео Дыхание природы"><video autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&h=675&q=85" width="1920" height="1080"><source data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"></video><span class="video-badge">SHORT FILM · DEMO</span><span class="play-icon" aria-hidden="true">▶</span><span class="video-title">Дыхание природы<span>СМОТРЕТЬ ФИЛЬМ</span></span></a>
+               autoplay muted loop playsinline обязательны; звук включается пользователем в лайтбоксе.
+               Обложку заменяйте в img.video-poster src и video poster: она видна, если autoplay недоступен. -->
+          <a class="work-media" href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" data-media="video" data-pswp-width="1920" data-pswp-height="1080" aria-label="Смотреть видео Дыхание природы"><img class="video-poster" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&h=675&q=85" alt="" aria-hidden="true" width="1920" height="1080" loading="lazy"><video autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&h=675&q=85" width="1920" height="1080"><source data-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"></video><span class="video-badge">SHORT FILM · DEMO</span><span class="video-title">Дыхание природы<span>СМОТРЕТЬ ФИЛЬМ</span></span></a>
           <div class="work-caption"><h3>Дыхание природы</h3><span>ВИДЕО / 2026</span></div>
         </article>
         <article class="work-card" data-category="reportage">
