@@ -76,7 +76,7 @@ export const translations = {
   'Название': 'Title', 'Описание': 'Description', 'Категория': 'Category', 'Медиафайл': 'Media file',
   'Фото: JPEG, PNG, WebP до 10 МБ. Видео: MP4 до 50 МБ. Превью фотографий создаётся автоматически.': 'Photos: JPEG, PNG, WebP up to 10 MB. Video: MP4 up to 50 MB. Photo thumbnails are generated automatically.',
   'Загрузить и опубликовать': 'Upload and publish', 'Выйти из аккаунта': 'Sign out',
-  'Демо-форма: адрес фотографа ещё не настроен. Укажите contactEmail в js/config.js.': 'Demo form: the photographer’s email is not configured yet. Set contactEmail in js/config.js.',
+  'Форма связи пока недоступна.': 'The contact form is currently unavailable.',
   'Показано работ: {count}': 'Works shown: {count}', 'Открыть: {title}': 'Open: {title}',
   'ПОРТРЕТ': 'PORTRAIT', 'РЕПОРТАЖ': 'EVENT', 'ВИДЕО': 'FILM',
   'Не удалось загрузить облачные работы. Демонстрационная галерея доступна.': 'Could not load cloud works. The demo gallery is still available.',

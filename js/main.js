@@ -62,7 +62,8 @@ document.querySelector('#contact-form').addEventListener('submit', event => {
   event.preventDefault();
   const status = document.querySelector('#contact-status');
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.contactEmail)) {
-    status.dataset.message = 'Демо-форма: адрес фотографа ещё не настроен. Укажите contactEmail в js/config.js.';
+    // Укажите email получателя в js/config.js; посетителям не показываем настройки проекта.
+    status.dataset.message = 'Форма связи пока недоступна.';
     status.textContent = t(status.dataset.message);
     return;
   }
